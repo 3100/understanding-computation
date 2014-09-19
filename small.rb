@@ -203,7 +203,7 @@ class Sequence < Struct.new(:first, :second)
   end
 end
 
-class while < Struct.new(:condition, :body)
+class While < Struct.new(:condition, :body)
   def inspect
     "<<#{self}>>"
   end
