@@ -1,26 +1,6 @@
-class FARule < Struct.new(:state, :character, :next_state)
-  def applies_to?(state, character)
-    self.state == state && self.character == character
-  end
-
-  def follow
-    next_state
-  end
-
-  def inspect
-    "#<FARule #{state.inspect} -- #{character}--> #{next_state.inspect}>"
-  end
-end
-
-class DFARulebook < Struct.new(:rules)
-  def next_state(state, character)
-    rule_for(state, character).follow
-  end
-
-  def rule_for(state, character)
-    rules.detect { |rule| rule.applies_to?(state, character) }
-  end
-end
+require_relative './dfa-design'
+require_relative './dfa-rulebook'
+require_relative './fa-rule'
 
 class DFA < Struct.new(:current_state, :accept_states, :rulebook)
   def accepting?
@@ -35,15 +15,5 @@ class DFA < Struct.new(:current_state, :accept_states, :rulebook)
     string.chars.each do |character|
       read_character(character)
     end
-  end
-end
-
-class DFADesign < Struct.new(:start_state, :accept_states, :rulebook)
-  def to_dfa
-    DFA.new(start_state, accept_states, rulebook)
-  end
-
-  def accepts?(string)
-    to_dfa.tap { |dfa| dfa.read_string(string) }.accepting?
   end
 end
