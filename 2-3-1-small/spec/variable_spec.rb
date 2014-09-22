@@ -1,4 +1,4 @@
-require 'spec_helper'
+require_relative 'spec_helper'
 
 describe Variable, "#new" do
   it "should calculate 'x + y = 7' when x = 3 and y = 4" do

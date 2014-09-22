@@ -1,4 +1,4 @@
-require 'spec_helper'
+require_relative 'spec_helper'
 
 describe While, "#evaluate" do
   it "returns 9 for 'while (x < 5) { x = x * 3 }' when x = 1" do

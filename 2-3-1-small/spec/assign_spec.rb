@@ -1,4 +1,4 @@
-require 'spec_helper'
+require_relative 'spec_helper'
 
 describe Assign, "#new" do
   it "enable to assign a new value to variable :x" do
@@ -7,6 +7,6 @@ describe Assign, "#new" do
       { x: Number.new(2) }
     )
     machine.run
-    machine.environment[:x].should eq(Number.new(3))
+    expect(machine.environment[:x]).to eq(Number.new(3))
   end
 end

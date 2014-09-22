@@ -1,4 +1,4 @@
-require 'spec_helper'
+require_relative 'spec_helper'
 
 describe Add, "#to_ruby" do
   it "returns 4 for 'x + 1' when x = 3" do

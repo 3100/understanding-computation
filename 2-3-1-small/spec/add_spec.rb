@@ -1,4 +1,4 @@
-require 'spec_helper'
+require_relative 'spec_helper'
 
 describe Add, "#new" do
   it "should enable to add two values" do
@@ -9,6 +9,6 @@ describe Add, "#new" do
       )
     )
     machine.run
-    machine.statement.should eq(Number.new(14))
+    expect(machine.statement).to eq(Number.new(14))
   end
 end

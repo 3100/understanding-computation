@@ -1,4 +1,4 @@
-require 'spec_helper'
+require_relative 'spec_helper'
 
 describe DFARulebook, "next_state" do
   it "returns 2 for 'a' at state 1" do

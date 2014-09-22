@@ -1,4 +1,4 @@
-require 'spec_helper'
+require_relative 'spec_helper'
 
 describe Sequence, "#new" do
   it "enable to compute two Assign statements" do

@@ -1,4 +1,4 @@
-require 'spec_helper'
+require_relative 'spec_helper'
 
 describe Number, "#evaluate" do
   it "returns a correct value" do

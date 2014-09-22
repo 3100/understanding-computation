@@ -1,4 +1,4 @@
-require 'spec_helper'
+require_relative 'spec_helper'
 
 describe Machine, "#run" do
   it "returns 9 for 'while x < 5; x = x * 3; end' when x = 1" do

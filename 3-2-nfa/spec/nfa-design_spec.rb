@@ -1,4 +1,4 @@
-require 'spec_helper'
+require_relative 'spec_helper'
 
 describe NFADesign, "#accepts?" do
   before :all do

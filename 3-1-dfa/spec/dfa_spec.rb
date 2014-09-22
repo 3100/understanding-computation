@@ -1,4 +1,4 @@
-require 'spec_helper'
+require_relative 'spec_helper'
 
 describe DFA, "#accepting?" do
   it "returns false for 'b'" do

@@ -1,4 +1,4 @@
-require 'spec_helper'
+require_relative 'spec_helper'
 
 describe LessThan, "#to_ruby" do
   it "returns false for 'x + 1 < 3' when x = 3" do

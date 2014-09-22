@@ -1,4 +1,4 @@
-require 'spec_helper'
+require_relative 'spec_helper'
 
 describe If, "#new" do
   it "should works as a condition statement" do
@@ -11,7 +11,7 @@ describe If, "#new" do
       { x: Boolean.new(true) }
     )
     machine.run
-    machine.environment[:y].should eq(Number.new(1))
+    expect(machine.environment[:y]).to eq(Number.new(1))
   end
 
   it "should do nothing if condition is false" do
@@ -20,6 +20,6 @@ describe If, "#new" do
       { x: Boolean.new(false) }
     )
     machine.run
-    machine.environment[:y].should be_nil
+    expect(machine.environment[:y]).to be_nil
   end
 end

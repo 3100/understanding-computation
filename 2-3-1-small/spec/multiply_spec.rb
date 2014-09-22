@@ -1,4 +1,4 @@
-require 'spec_helper'
+require_relative 'spec_helper'
 
 describe Multiply, "#new" do
   it "should enable to multiply two values" do
