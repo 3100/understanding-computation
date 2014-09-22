@@ -2,8 +2,8 @@ box: wercker/ruby
 build:
   steps:
     - rvm-use:
-      version: ruby-2.1.2
+        version: ruby-2.1.2
     - bundle-install
     - script:
-      name: rspec
-      code: for D in *; do if [ -d "${D}" ]; then bundle exec rspec "${D}/spec" fi done
+        name: rspec
+        code: for D in *; do if [ -d "${D}" ]; then bundle exec rspec "${D}/spec" fi done
