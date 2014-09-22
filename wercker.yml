@@ -1,8 +1,7 @@
-box: wercker/rvm
+box: wercker/ruby
 build:
   steps:
     - bundle-install
-
     - script:
       name: rspec
       code: for D in *; do
