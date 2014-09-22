@@ -6,6 +6,6 @@ describe Multiply, "#new" do
       Multiply.new(Number.new(3), Number.new(4))
     )
     machine.run
-    machine.statement.should eq(Number.new(12))
+    expect(machine.statement).to eq(Number.new(12))
   end
 end

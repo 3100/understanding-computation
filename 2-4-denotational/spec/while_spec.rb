@@ -7,6 +7,6 @@ describe While, "to_ruby" do
       Assign.new(:x, Multiply.new(Variable.new(:x), Number.new(3)))
     )
     res = eval(statement.to_ruby).call({ x: 1 })
-    res[:x].should eq(9)
+    expect(res[:x]).to eq(9)
   end
 end

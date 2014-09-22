@@ -9,8 +9,8 @@ describe Variable, "#new" do
       { x: Number.new(3), z: Number.new(4) }
     )
     machine.run
-    machine.environment[:x].should eq(Number.new(3))
-    machine.environment[:z].should eq(Number.new(4))
-    machine.statement.should eq(Number.new(7))
+    expect(machine.environment[:x]).to eq(Number.new(3))
+    expect(machine.environment[:z]).to eq(Number.new(4))
+    expect(machine.statement).to eq(Number.new(7))
   end
 end

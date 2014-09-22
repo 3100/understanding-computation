@@ -9,7 +9,7 @@ describe Sequence, "#new" do
       ), {}
     )
     machine.run
-    machine.environment[:x].should eq(Number.new(2))
-    machine.environment[:y].should eq(Number.new(5))
+    expect(machine.environment[:x]).to eq(Number.new(2))
+    expect(machine.environment[:y]).to eq(Number.new(5))
   end
 end

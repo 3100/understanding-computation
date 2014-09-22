@@ -10,7 +10,7 @@ describe Machine, "#run" do
       ), env
     )
     machine.run
-    machine.statement.should eq(DoNothing.new)
-    machine.environment[:x].should eq(Number.new(9))
+    expect(machine.statement).to eq(DoNothing.new)
+    expect(machine.environment[:x]).to eq(Number.new(9))
   end
 end

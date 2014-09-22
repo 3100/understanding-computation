@@ -6,14 +6,14 @@ describe DFADesign, "#accepts?" do
   end
 
   it "returns false for 'a'" do
-    @dfa_design.accepts?('a').should be_false
+    expect(@dfa_design.accepts?('a')).to be false
   end
 
   it "returns false for 'baa'" do
-    @dfa_design.accepts?('baa').should be_false
+    expect(@dfa_design.accepts?('baa')).to be false
   end
 
   it "returns false for 'baba'" do
-    @dfa_design.accepts?('baba').should be_true
+    expect(@dfa_design.accepts?('baba')).to be true
   end
 end

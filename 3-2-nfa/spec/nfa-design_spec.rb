@@ -14,18 +14,18 @@ describe NFADesign, "#accepts?" do
   end
 
   it "returns true for 'aa'" do
-    @nfa_design.accepts?('aa').should be_true
+    expect(@nfa_design.accepts?('aa')).to be true
   end
 
   it "returns true for 'aaa'" do
-    @nfa_design.accepts?('aaa').should be_true
+    expect(@nfa_design.accepts?('aaa')).to be true
   end
 
   it "returns false for 'aaaaa'" do
-    @nfa_design.accepts?('aaaaa').should be_false
+    expect(@nfa_design.accepts?('aaaaa')).to be false
   end
 
   it "returns true for 'aaaaaa'" do
-    @nfa_design.accepts?('aaaaaa').should be_true
+    expect(@nfa_design.accepts?('aaaaaa')).to be true
   end
 end
