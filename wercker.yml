@@ -4,4 +4,4 @@ build:
     - bundle-install
     - script:
         name: rspec
-        code: for D in *; do if [ -d "${D}" ]; then bundle exec rspec "${D}/spec" fi done
+        code: for D in *; do if [ -d "${D}" ]; then bundle exec rspec "${D}/spec"; fi; done
